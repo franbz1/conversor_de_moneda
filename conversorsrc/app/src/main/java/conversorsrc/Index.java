@@ -5,6 +5,8 @@
 package conversorsrc;
 
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 /**
  *
@@ -16,6 +18,7 @@ public class Index extends javax.swing.JFrame {
      * Creates new form Index
      */
     public Index() {
+        
         this.setResizable(false);
         initComponents();
     }
@@ -48,6 +51,7 @@ public class Index extends javax.swing.JFrame {
         btn1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setLocationByPlatform(true);
         setMaximumSize(new java.awt.Dimension(500, 300));
         setMinimumSize(new java.awt.Dimension(500, 300));
@@ -432,6 +436,12 @@ public class Index extends javax.swing.JFrame {
             valorEntrada.setText("INGRESE EL VALOR A CONVERTIR");
         }
     }
+    
+    
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("moneda.png"));
+        return retValue;
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btn1;
